@@ -88,12 +88,12 @@ PSRI <- function(B2, B4, B6) {
 
 #Soil-Adjusted Vegetation Index (SAVI)
 SAVI <- function(B4, B8) {
-  SAVIscore <- 1.5(B8 - B4) / (B8 + B4 + 0.5)
+  SAVIscore <- 1.5 * (B8 - B4) / (B8 + B4 + 0.5)
   return(SAVIscore)
 }
 
 #Normalized Difference Tillage Index (NDTI)
 NDTI <- function(B11, B12) {
-  SAVIscore <- (B11 - B12) / (B11 + B12)
+  NDTIscore <- (B11 - B12) / (B11 + B12)
   return(NDTIscore)
 }
