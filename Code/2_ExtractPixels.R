@@ -45,3 +45,8 @@ table(Crops$croptype)
 #Select the following: Almond, Grape (Wine), Olive, Walnut
 Crops <- Crops %>% filter(croptype == "OLIVE" | croptype == "WALNUT" | croptype == "ALMOND" |
                             croptype == "GRAPE, WINE")
+#-------------------------------------------------------------------------------
+#Export to csv
+#-------------------------------------------------------------------------------
+Crops.df <- st_drop_geometry(Crops)
+write.csv(Crops.df, "YoloCountyCropsML.csv")
